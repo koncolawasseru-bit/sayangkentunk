@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Donasi KONCO LAWAS SERU | Keluarga Pak Sugiono (Kentunk) Rahimahullah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #fef9e6 0%, #fff7ed 100%);
+      font-family: 'Inter', sans-serif;
+      color: #2c2418;
+      line-height: 1.5;
+    }
+
+    .bg-pattern {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(#e3d5bc 1px, transparent 1px);
+      background-size: 32px 32px;
+      opacity: 0.25;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .komunitas-header {
+      background: linear-gradient(135deg, #1f3b2c 0%, #2c4e35 100%);
+      border-radius: 2rem;
+      margin-bottom: 2.5rem;
+      padding: 1.2rem 2rem;
+      box-shadow: 0 18px 32px -12px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255,215,140,0.3);
+    }
+
+    .header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo-konco {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-icon {
+      background: #f7b32b;
+      width: 55px;
+      height: 55px;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: #2c4e35;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+    }
+
+    .logo-text h2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 1.9rem;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #FFE6B0, #FFCF80);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.1rem;
+    }
+
+    .logo-text p {
+      color: #d4c09c;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .badge-konco {
+      background: rgba(247, 179, 43, 0.2);
+      backdrop-filter: blur(4px);
+      padding: 0.5rem 1.2rem;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(247, 179, 43, 0.5);
+    }
+
+    .badge-konco span {
+      color: #FFE3A4;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: #2b5e2f;
+      color: #ffefcf;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Amiri', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #2c4b2e;
+      margin-bottom: 0.5rem;
+    }
+
+    .arabic-salam {
+      font-family: 'Amiri', serif;
+      font-size: 1.6rem;
+      color: #8b6c3c;
+      margin-bottom: 0.5rem;
+    }
+
+    .subhead {
+      font-size: 1.15rem;
+      max-width: 700px;
+      margin: 0.75rem auto 0;
+      color: #5e4b2e;
+      background: rgba(255,245,220,0.7);
+      padding: 0.5rem 1.2rem;
+      border-radius: 60px;
+      display: inline-block;
+    }
+
+    .card {
+      background: rgba(255, 253, 245, 0.96);
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      border: 1px solid rgba(214, 190, 140, 0.4);
+    }
+
+    .card-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .info-highlight {
+      background: #fdf4e0;
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-right: 5px solid #f3b33d;
+    }
+
+    .bank-details {
+      background: white;
+      border-radius: 1.8rem;
+      padding: 1.8rem;
+      text-align: center;
+      box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1e5cf;
+      margin: 2rem 0;
+    }
+
+    .bank-logo {
+      font-size: 2.8rem;
+      color: #1e5a9c;
+    }
+
+    .rekening-number {
+      font-family: monospace;
+      font-weight: 800;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      background: #f9f3e6;
+      display: inline-block;
+      padding: 0.2rem 1.2rem;
+      border-radius: 60px;
+      color: #2c3e2b;
+      margin: 0.75rem 0;
+      border: 1px dashed #cbbf8c;
+    }
+
+    .btn-copy {
+      background: #2c5e2f;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 40px;
+      color: white;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-copy:hover {
+      background: #1f4621;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1.1rem;
+      background: #faf3e4;
+      padding: 1.2rem;
+      border-radius: 2rem;
+      text-align: center;
+      color: #6f4f2e;
+    }
+
+    .footer {
+      text-align: center;
+      padding-top: 1rem;
+      font-size: 0.9rem;
+      color: #7f6948;
+      border-top: 1px solid #eedfc6;
+    }
+
+    .grid-2 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.8rem;
+    }
+
+    .grid-item {
+      flex: 1;
+      min-width: 220px;
+      background: #faf1e0;
+      border-radius: 1.5rem;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .donation-amount {
+      background: #eef5e8;
+    }
+
+    .btn-wa {
+      background: #25D366;
+      color: white;
+      border-radius: 40px;
+      padding: 0.7rem 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 0.8rem;
+    }
+
+    .btn-wa:hover {
+      background: #1da15a;
+    }
+
+    @media (max-width: 700px) {
+      h1 { font-size: 2rem; }
+      .rekening-number { font-size: 1.3rem; }
+      .logo-text h2 { font-size: 1.4rem; }
+    }
+
+    .highlight-text {
+      font-weight: 700;
+      color: #b4621a;
+    }
+
+    .seru-tagline {
+      background: #ffe6c2;
+      display: inline-block;
+      border-radius: 30px;
+      padding: 0.2rem 1rem;
+      font-size: 0.75rem;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="bg-pattern"></div>
+<div class="container">
+  
+  <div class="komunitas-header">
+    <div class="header-flex">
+      <div class="logo-konco">
+        <div class="logo-icon"><i class="fas fa-handshake"></i></div>
+        <div class="logo-text">
+          <h2>KONCO LAWAS SERU</h2>
+          <p><i class="fas fa-users"></i> Solidaritas sejati • Berkah bersama</p>
+        </div>
+      </div>
+      <div class="badge-konco">
+        <i class="fas fa-fire"></i>
+        <span>#GerakCepatPeduli</span>
+        <i class="fas fa-heart"></i>
+      </div>
+    </div>
+    <div style="text-align: right;">
+      <span class="seru-tagline"><i class="fas fa-mosque"></i> Kebersamaan kita adalah kekuatan</span>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="badge"><i class="fas fa-hand-holding-heart"></i> Donasi Kebaikan • Konco Lawas Seru</div>
+    <div class="arabic-salam">السلام عليكم ورحمة الله وبركاته</div>
+    <h1>Donasi untuk Putra<br>Almarhum Pak Sugiono (Kentunk)</h1>
+    <div class="subhead">
+      <i class="fas fa-users"></i> Silaturahim & dukungan menuju masa depan cerah
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-inner">
+      <div class="info-highlight">
+        <p><i class="fas fa-calendar-check"></i> <strong>Kesepakatan bersama – Rumah H. Zaid Laptop</strong></p>
+        <p>Kami (komunitas <strong>KONCO LAWAS SERU</strong>) telah bersepakat membuka donasi untuk anak dari sahabat dan ketua kita, <strong>Pak Sugiono / Pak Kentunk <span style="font-family:Amiri;">Rahimahullah</span></strong>. Donasi akan diserahkan sekaligus silaturahim ke keluarga beliau <strong>in syaa Allah</strong>.</p>
+        <p style="margin-top: 0.8rem;"><i class="fas fa-mosque"></i> <strong>Silaturahim & serah donasi :</strong> <span class="highlight-text">16 Juni 2026</span></p>
+      </div>
+
+      <div style="background: #fef7e9; border-radius: 1.5rem; padding: 1rem; margin: 1.5rem 0;">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+          <i class="fas fa-graduation-cap" style="font-size: 2rem; color: #e3a237;"></i>
+          <div><strong>Penerima manfaat</strong> : Putra dari Pak Sugiono / Pak Kentunk<br>
+          Saat ini <strong>kelas 3 SMP</strong> akan melanjutkan ke <strong class="highlight-text">SMA</strong>.<br>
+          Dana untuk biaya persiapan pendidikan & kebutuhan sehari-hari.</div>
+        </div>
+      </div>
+
+      <div class="bank-details">
+        <div class="bank-logo"><i class="fas fa-university"></i> BCA</div>
+        <div class="rekening-number" id="rekeningText">7900919128</div>
+        <div style="font-weight: 600;">a/n <strong>ABDUR ROUF FURQONI</strong></div>
+        <button class="btn-copy" id="copyBtn"><i class="far fa-copy"></i> Salin nomor rekening</button>
+        <div style="margin-top: 0.8rem; font-size: 0.85rem;"><i class="fas fa-check-circle"></i> Transfer seikhlasnya</div>
+        <div style="margin-top: 12px; background:#eef3e6; border-radius:60px; padding:6px 12px; display:inline-block; font-size:0.75rem;">
+          <i class="fas fa-hand-peace"></i> Konco Lawas Seru — Guyub, Rukun, Berkah
+        </div>
+      </div>
+
+      <div class="quote">
+        <i class="fas fa-quote-right"></i> “Sedekah tidak akan mengurangi harta.” <br>(HR. Muslim)
+        <div style="margin-top: 12px; font-style: normal;">
+          <i class="fas fa-leaf"></i> Setiap donasi menjadi amal jariyah, membawa keberkahan.
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="grid-item donation-amount">
+          <i class="fas fa-hand-holding-usd" style="font-size: 1.8rem; color:#f3b33d;"></i>
+          <h3 style="margin: 0.5rem 0;">Berikan Donasi Terbaikmu</h3>
+          <p>Kecil atau besar, semua bernilai di sisi Allah.</p>
+        </div>
+        <div class="grid-item">
+          <i class="fas fa-handshake" style="font-size: 1.8rem; color:#8b6c3c;"></i>
+          <h3 style="margin: 0.5rem 0;">Jalin Silaturahim</h3>
+          <p>16 Juni 2026 kita serahkan donasi ke keluarga.</p>
+          <a href="#" id="waShareBtn" class="btn-wa"><i class="fab fa-whatsapp"></i> Bagikan</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <p><i class="fas fa-heart" style="color:#e07c3c;"></i> Mari bersama ringankan beban, bahagiakan keluarga.</p>
+        <p style="margin-top: 0.8rem; font-weight: 500;">Jayakumullahu khairan katsiran — Konco Lawas Seru</p>
+        <p style="font-family: 'Amiri';">آمين يا رب العالمين</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <i class="fas fa-clock"></i> Penyerahan donasi & silaturahim : 16 Juni 2026<br>
+    <span>#KoncoLawasSeru</span>
+  </div>
+</div>
+
+<script>
+  const copyBtn = document.getElementById('copyBtn');
+  const rekeningText = document.getElementById('rekeningText').innerText;
+
+  copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(rekeningText).then(() => {
+      const originalText = copyBtn.innerHTML;
+      copyBtn.innerHTML = '<i class="fas fa-check"></i> Tersalin!';
+      setTimeout(() => {
+        copyBtn.innerHTML = originalText;
+      }, 2000);
+    });
+  });
+
+  const waShareBtn = document.getElementById('waShareBtn');
+  waShareBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const message = `Assalamu'alaikum, 
+
+Kami dari KONCO LAWAS SERU membuka donasi untuk anak almarhum Pak Sugiono / Pak Kentunk. Anak beliau kelas 3 SMP akan naik SMA.
+
+Rekening BCA: 7900919128 a.n ABDUR ROUF FURQONI
+
+Semoga menjadi amal jariyah. Jazakumullahu khairan.`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, '_blank');
+  });
+</script>
+</body>
+</html>
